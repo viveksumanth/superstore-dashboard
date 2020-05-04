@@ -1,0 +1,40 @@
+<div>
+    <div fxFlex="60">
+    <app-choroplethmap data="choropleth"></app-choroplethmap>
+    </div>
+     <div fxFlex="40">
+       <p>another map</p>
+    </div>
+</div>
+
+<mat-divider></mat-divider>
+<br>
+<div>
+    <div fx layout="row" fxLayoutAlign="space-between center" fxLayoutGap = "20px" class="stats-cards">
+        <mat-card fxFlex = "25">
+            <app-card1 [data]="card1">[</app-card1>
+        </mat-card>
+        <mat-card fxFlex = "25">
+            <app-card2 [data]="card2"></app-card2>
+        </mat-card>
+        <mat-card fxFlex = "25">
+            <app-card3 [data]="card3"></app-card3>
+        </mat-card>
+        <mat-card fxFlex = "25">
+            <app-card4 [data]="card4"></app-card4>
+        </mat-card>
+</div>
+
+<mat-divider></mat-divider>
+<br>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap = "10px">
+    <div fxFlex="40">
+    <app-pie data="pieChart"></app-pie>
+    </div> 
+    <div fxFlex="60">
+        <app-stacked-chart [data]="bigChart"></app-stacked-chart>
+        </div> 
+    <br>
+</div>
+<mat-divider></mat-divider>
+

@@ -1,0 +1,17 @@
+.profile-card{
+    text-align: center;
+    padding:0 20px 20px 20px;
+    img{
+        widows: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+ 
+}
+:host{
+    .mat-icon{
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+}
