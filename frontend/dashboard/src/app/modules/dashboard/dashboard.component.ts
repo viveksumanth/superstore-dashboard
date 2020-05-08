@@ -10,7 +10,8 @@ export class DashboardComponent implements OnInit {
 
   bigChart=[];
   pieChart=[];
-  choroplethmap= [];
+  choroplethmap=[];
+  state = [];
   card1: any;
   card2: any;
   card3: any;
@@ -24,7 +25,8 @@ export class DashboardComponent implements OnInit {
     this.card2 = this.dashboardService.card2();
     this.card3= this.dashboardService.card3();
     this.card4 = this.dashboardService.card4();
-    this.choroplethmap = this.dashboardService.choroplethmap(); 
+    this.choroplethmap = this.dashboardService.choroplethmap();
+    this.state = this.dashboardService.state();
 
   }
 

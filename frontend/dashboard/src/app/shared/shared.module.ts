@@ -25,6 +25,7 @@ import { Card3Component } from './widget/card3/card3.component';
 import { DashboardService } from '../modules/dashboard.service';
 import { ChoroplethmapComponent } from './widget/choroplethmap/choroplethmap.component';
 import { Card4Component } from './widget/card4/card4.component';
+import { StateComponent } from './widget/state/state.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { Card4Component } from './widget/card4/card4.component';
     Card3Component,
     ChoroplethmapComponent,
     Card4Component,
+    StateComponent,
   ],
   imports: [
     CommonModule,
@@ -64,6 +66,7 @@ import { Card4Component } from './widget/card4/card4.component';
     Card3Component,
     Card4Component,
     ChoroplethmapComponent,
+    StateComponent,
   ],
   providers: [DashboardService],
 })

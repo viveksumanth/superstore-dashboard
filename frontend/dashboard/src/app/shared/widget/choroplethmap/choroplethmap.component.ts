@@ -4,6 +4,7 @@ import { DashboardService } from 'src/app/modules/dashboard.service';
 import * as Highcharts from 'highcharts';
 import HC_exporting from 'highcharts/modules/exporting';
 import MapModule from 'highcharts/modules/map'
+import { keyValuesToMap } from '@angular/flex-layout/extended/typings/style/style-transforms';
 
 MapModule(Highcharts);
 
@@ -18,7 +19,7 @@ const map = require('@highcharts/map-collection/custom/world.geo.json')
 export class ChoroplethmapComponent implements OnInit {
 
   chartOptions: {};
-
+  @Input() data: any = [];
 
   Highcharts = Highcharts
   chart;
@@ -29,7 +30,6 @@ export class ChoroplethmapComponent implements OnInit {
   constructor(private dashboardservice: DashboardService) { }
 
   ngOnInit() {
-  
     this.chartOptions=
       {
         chart: {
@@ -80,8 +80,7 @@ export class ChoroplethmapComponent implements OnInit {
       }, 30000);
 }
 mapdata(){
-  var test = this.dashboardservice.choroplethmap()
-  console.log(test)
-  return test
+  
+  console.log(this.data)
 }
 }

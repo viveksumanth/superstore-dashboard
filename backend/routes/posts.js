@@ -254,14 +254,13 @@ router.get('/top5sales',async(req,res)=>{
     }); 
 })
 
-router.get('/orders_per_country',async(req,res)=>{
-    query = superstore.distinct("Country")
-    console.log(query)
+router.get('/orderspercountry',async(req,res)=>{
+    // db.superstores.aggregate([{$group : {_id : "$Country", totalquantity : {$sum : "$Quantity"}}}])
+    query = superstore.aggregate([{$group : {_id : "$Country", value : {$sum : "$Quantity"}}}])
     query.exec(function(err, result) {
         if (err)
             res.send(err)
         console.log('distinct countries ')
-        // console.log(result)
         data = (result)
         console.log(data)
         res.json(result); 

@@ -1,12 +1,12 @@
-<div>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap = "5px">
     <div fxFlex="60">
-    <app-choroplethmap data="choropleth"></app-choroplethmap>
+    <app-choroplethmap [data]="choroplethmap"></app-choroplethmap>
     </div>
+    <mat-divider></mat-divider>
      <div fxFlex="40">
-       <p>another map</p>
+       <app-state [data]="state"></app-state>
     </div>
 </div>
-
 <mat-divider></mat-divider>
 <br>
 <div>

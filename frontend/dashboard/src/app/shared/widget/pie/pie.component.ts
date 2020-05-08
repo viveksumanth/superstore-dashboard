@@ -21,8 +21,8 @@ export class PieComponent implements OnInit {
 
     this.dashboardservice.top5sales().subscribe(data=>{
       this.valueD = data
-      console.log(data)
-      console.log(this.valueD)
+      // console.log(data)
+      // console.log(this.valueD)
       this.piechart(this.valueD) 
     });
     }
@@ -84,6 +84,5 @@ export class PieComponent implements OnInit {
         }]
       }]
       }
-
     }
   }
